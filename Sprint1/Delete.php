@@ -3,7 +3,7 @@ include_once "./loader.php";
 
 if (isset($_GET['id'])) {
     $delete = new Delete($_GET['id']);
-    header("Location: ./Application/index.php");
+    header("Location: ./index.php");
 }
 
 class Delete{

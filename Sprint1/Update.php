@@ -58,7 +58,7 @@ class Update{
 
         <button name="submite">Update</button>
 </form>
-<a class="Back" href="../public/show_trainee.php">Back To Home</a>
+<a class="Back" href="./index.php">Back To Home</a>
 </body>
 </html>
 <style>

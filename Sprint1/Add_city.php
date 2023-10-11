@@ -1,9 +1,8 @@
 <?php
 
-include_once "./Application/DAL/connection.php";
+include_once "./loader.php";
 
 
-include_once "../managment/fetch_city.php";
 
 
 
