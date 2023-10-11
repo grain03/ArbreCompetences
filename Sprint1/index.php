@@ -1,11 +1,10 @@
 <?php
-include_once "../managment/fetch_trainee.php";
-include_once "../managment/get_analytics.php";
+include_once "./loader.php";
 $Trainee = new TraineeManagement;
 $traineeData = $Trainee->getAll();
 
 ?>
- 
+
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +16,7 @@ $traineeData = $Trainee->getAll();
     <h1>Prototype 2</h1>
     
     <div class="table">
-        <a class="ajouter" href="../view/Add.php">+ Add Stagaire</a>
+        <a class="ajouter" href="./Add.php">+ Add Stagaire</a>
         <table id="customers">
             <tr>
                 <th>Id</th>
@@ -33,8 +32,8 @@ $traineeData = $Trainee->getAll();
                 <td><?php echo $trainee->getFullName(); ?></td>
                 <td><?php echo $trainee->getCNE(); ?></td>
                 <td><?php echo $trainee->getCity(); ?></td>
-                <td><a class="dlt" href="../view/Delete.php?id=<?php echo $trainee->getId(); ?>">Delete</a></td>
-                <td><a class="updt" href="../view/Update.php?id=<?php echo $trainee->getId(); ?>">Update</a></td>
+                <td><a class="dlt" href="./Delete.php?id=<?php echo $trainee->getId(); ?>">Delete</a></td>
+                <td><a class="updt" href="./Update.php?id=<?php echo $trainee->getId(); ?>">Update</a></td>
             </tr>
             <?php } ?>
     
@@ -76,8 +75,6 @@ for ($i=0; $i < count($cities->analytics()); $i++) {
 
 
 <script>
-    console.log(data);
-    console.log(cities);
   const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
